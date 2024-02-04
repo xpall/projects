@@ -449,7 +449,9 @@ textarea {
 }
 
 .project-details__content-subtitle + p {
-  margin-left: 1rem
+  margin-left: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* ## */
