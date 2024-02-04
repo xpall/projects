@@ -442,7 +442,17 @@ textarea {
     @media only screen and (max-width: 37.5em) {
       .project-details__content-title {
         font-size: 2.4rem; } }
+/* ## */
+.project-details__content-subtitle {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
 
+.project-details__content-subtitle + p {
+  margin-left: 1rem
+}
+
+/* ## */
 .project-details__showcase-img-cont {
   width: 100%;
   margin-bottom: 6rem; }
@@ -718,11 +728,12 @@ textarea {
 }
 
 .project-picture {
+  max-width: 100%;
   border-style: solid;
-  border-width: 4px;
+  border-width: 10px;
   border-radius: 10px;
   border-color: #0062b9;
-  transition: transform .25s;
+  transition: transform .3s;
 }
 
 .project-picture:hover {
@@ -735,4 +746,11 @@ textarea {
 
 .fast-live-link > a {
   margin: 0.5rem;
+}
+
+.highlight-word {
+  color: #0062b9;
+  background-color: white;
+  padding: 0rem .75rem;
+  border-radius: 10px;
 }
