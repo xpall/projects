@@ -442,7 +442,7 @@ textarea {
     @media only screen and (max-width: 37.5em) {
       .project-details__content-title {
         font-size: 2.4rem; } }
-/* ## */
+        
 .project-details__content-subtitle {
   font-weight: 600;
   font-size: 2.4rem;
@@ -454,7 +454,6 @@ textarea {
   text-justify: inter-word;
 }
 
-/* ## */
 .project-details__showcase-img-cont {
   width: 100%;
   margin-bottom: 6rem; }
