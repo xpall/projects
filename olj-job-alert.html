@@ -91,7 +91,7 @@
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">OLJ Alerts</h1>
+        <h1 class="heading-primary">OLJ Job Alert</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
             I built an automated job alert system that scrapes <strong>OnlineJobs.ph</strong> for new and updated postings,
@@ -109,11 +109,28 @@
       <div class="main-container">
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
-            <img class="project-picture"
-              src="./assets/jpeg/project-olj-job-alert.png"
-              alt="Project Image"
-              class="project-details__showcase-img"
-            />
+            <div class="carousel">
+              <div class="carousel__track">
+                <div class="carousel__slide carousel__slide--active">
+                  <img class="project-picture"
+                    src="./assets/jpeg/project-olj-job-alert.jpg"
+                    alt="Project Image"
+                  />
+                </div>
+                <div class="carousel__slide">
+                  <img class="project-picture"
+                    src="https://raw.githubusercontent.com/xpall/olj-job-alert/refs/heads/main/misc/Diagram.jpg"
+                    alt="Architecture Diagram"
+                  />
+                </div>
+              </div>
+              <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">&#10094;</button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Next slide">&#10095;</button>
+              <div class="carousel__indicators">
+                <span class="carousel__dot carousel__dot--active"></span>
+                <span class="carousel__dot"></span>
+              </div>
+            </div>
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
@@ -236,5 +253,29 @@
     </footer>
     <script src="/index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      (function () {
+        const track = document.querySelector('.carousel__track');
+        const slides = document.querySelectorAll('.carousel__slide');
+        const dots = document.querySelectorAll('.carousel__dot');
+        const prevBtn = document.querySelector('.carousel__btn--prev');
+        const nextBtn = document.querySelector('.carousel__btn--next');
+        let current = 0;
+
+        function goTo(index) {
+          slides[current].classList.remove('carousel__slide--active');
+          dots[current].classList.remove('carousel__dot--active');
+          current = (index + slides.length) % slides.length;
+          slides[current].classList.add('carousel__slide--active');
+          dots[current].classList.add('carousel__dot--active');
+        }
+
+        prevBtn.addEventListener('click', function () { goTo(current - 1); });
+        nextBtn.addEventListener('click', function () { goTo(current + 1); });
+        dots.forEach(function (dot, i) {
+          dot.addEventListener('click', function () { goTo(i); });
+        });
+      })();
+    </script>
   </body>
 </html>
