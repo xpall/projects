@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>John Lloyd's Project</title>
+    <meta name="description" content="OLJAlerts" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/xpall/icons-svg/main/jl-logo-blue-text-bold-softcorner.svg" >
+    <link rel="shortcut icon" href="/favicon.ico">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/headshot.png"
+              alt="John Lloyd Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">John Lloyd</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#projects" class="header__link"> Projects </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://resume.johnlloyd.dev/John-Lloyd-Resume.pdf" target="_blank" class="header__link"> Resume </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://resume.johnlloyd.dev/John-Lloyd-Resume.pdf" target="_blank"> Resume </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">OL Job Alert SaaS</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            A multi-tenant <strong>SaaS platform</strong> for OnlineJobs.ph job alerts with <strong>Telegram bot integration</strong>.
+            Users bring their own Telegram bot, subscribe to keywords via a web dashboard, and receive real-time alerts when jobs match.
+            <br> Built with <strong>Django 4.2</strong>, <strong>PostgreSQL LISTEN/NOTIFY</strong>, and <strong>Celery</strong> for real-time, event-driven job matching.
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="https://github.com/xpall/olj-job-alert-django" class="btn btn--bg" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <div class="carousel">
+              <div class="carousel__track">
+                <div class="carousel__slide carousel__slide--active">
+                  <img class="project-picture"
+                    src="./assets/jpeg/project-olj-job-alert.jpg"
+                    alt="Project Image"
+                  />
+                </div>
+                <div class="carousel__slide">
+                  <img class="project-picture"
+                    src="https://raw.githubusercontent.com/xpall/olj-job-alert/refs/heads/main/misc/Diagram.jpg"
+                    alt="Architecture Diagram"
+                  />
+                </div>
+              </div>
+              <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">&#10094;</button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Next slide">&#10095;</button>
+              <div class="carousel__indicators">
+                <span class="carousel__dot carousel__dot--active"></span>
+                <span class="carousel__dot"></span>
+              </div>
+            </div>
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <h4 class="project-details__content-subtitle">Introduction</h4>
+              <p class="project-details__desc-para">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OLJAlerts SaaS transforms the concept of job alerts into a multi-tenant web application where each user
+                brings their own Telegram bot. Users register via web or Google OAuth, connect their bot token, manage keyword subscriptions
+                through a modern dashboard, and receive real-time alerts powered by PostgreSQL's LISTEN/NOTIFY mechanism.
+                Built with Django 4.2, Celery, and Redis, the platform offers a freemium model with robust security and modern UI.
+              </p>
+              <h4 class="project-details__content-subtitle">Challenges</h4>
+              <p class="project-details__desc-para">
+                <strong>⏺ Multi-Tenant Architecture:</strong> Building a system where each user has their own Telegram bot while maintaining data isolation and security.<br>
+                <strong>⏺ Real-Time Processing:</strong> Implementing instant job matching and alerts without polling overhead or delays.<br>
+                <strong>⏺ Bot Security:</strong> Encrypting bot tokens at rest and validating connectivity without exposing credentials.<br>
+                <strong>⏺ Subscription Management:</strong> Implementing tiered keyword limits and user quota enforcement.<br>
+                <strong>⏺ User-Friendly Bot Setup:</strong> Simplifying bot connection without requiring webhooks or public URLs.
+              </p>
+              <h4 class="project-details__content-subtitle">Solution</h4>
+              <p class="project-details__desc-para">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The solution uses PostgreSQL LISTEN/NOTIFY triggers for real-time event-driven architecture. When a new job is scraped
+                from OnlineJobs.ph, a trigger fires a NOTIFY event that a dedicated Celery worker listens for. The worker processes jobs,
+                matches them against user keywords using word-boundary regex, and delivers alerts via Telegram API. Bot setup is simplified
+                using @getidsbot for Chat ID (no webhooks needed), and all bot tokens are encrypted with cryptography.fernet.
+                The entire system runs in Docker Compose with data persistence, featuring a modern Tailwind CSS UI.
+              </p>
+              <h4 class="project-details__content-subtitle">Key Features</h4>
+              <p class="project-details__desc-para">
+                <strong>✔ Multi-Tenant Bot System:</strong> Each user connects their own Telegram bot with encrypted token storage.<br>
+                <strong>✔ Real-Time Alerts:</strong> PostgreSQL LISTEN/NOTIFY triggers for instant job processing - no polling.<br>
+                <strong>✔ Web-Based Keyword Management:</strong> Full CRUD (Add, List, Delete, Toggle) with validation and tier limits.<br>
+                <strong>✔ Subscription Tiers:</strong> Free tier (3 keywords) and Contributor tier (unlimited) with charity donations.<br>
+                <strong>✔ Simplified Bot Setup:</strong> Uses @getidsbot for Chat ID - no webhooks or public URL required.<br>
+                <strong>✔ Modern UI:</strong> Tailwind CSS sidebar layout with responsive design and job statistics.<br>
+                <strong>✔ Automated Scraping:</strong> Built-in OnlineJobs.ph scraper with rate limiting and duplicate detection.<br>
+                <strong>✔ Alert History:</strong> Track sent alerts, prevent duplicates, automatic cleanup after 2 weeks.
+              </p>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python-icon" width="30" height="30">Python 3.11</div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg" alt="django-icon" width="30" height="30">Django 4.2</div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="postgresql-icon" width="30" height="30">PostgreSQL 14</div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg" alt="redis-icon" width="30" height="30">Redis 7</div>
+                <div class="skills__skill"><img src="https://www.vectorlogo.zone/logos/celeryproject/celeryproject-icon.svg" alt="celery-icon" width="30" height="30">Celery</div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="docker-icon" width="30" height="30">Docker</div>
+                <div class="skills__skill"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="telegram-icon" width="30" height="30">Telegram API</div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon" width="30" height="30">Tailwind CSS</div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git-icon" width="30" height="30"><p>Git</p></div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="https://github.com/xpall/olj-job-alert-django"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >View Code</a
+              >
+              <a
+                href="https://github.com/xpall/olj-job-alert-django#quick-start"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Get Started</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://github.com/xpall">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/github-ico.svg"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/johnlloyddev/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/linkedin-ico.svg"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/johnlloyd.dev">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/facebook-ico.svg"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="mailto:contact@johnlloyd.dev">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/gmail-ico.svg"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">John Lloyd</h4>
+            <p class="main-footer__short-desc">
+              <a href="mailto:contact@johnlloyd.dev">📩 contact@johnlloyd.dev</a><br>
+              🏳️ Laguna, Philippines
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2026 |<a rel="noreferrer" target="_blank" href="https://github.com/xpall/portfolio"
+            >John Lloyd</a
+          >
+          forked from<a rel="noreferrer" target="_blank" href="https://github.com/rammcodes/Dopefolio">Rammcodes</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      (function () {
+        const track = document.querySelector('.carousel__track');
+        const slides = document.querySelectorAll('.carousel__slide');
+        const dots = document.querySelectorAll('.carousel__dot');
+        const prevBtn = document.querySelector('.carousel__btn--prev');
+        const nextBtn = document.querySelector('.carousel__btn--next');
+        let current = 0;
+
+        function goTo(index) {
+          slides[current].classList.remove('carousel__slide--active');
+          dots[current].classList.remove('carousel__dot--active');
+          current = (index + slides.length) % slides.length;
+          slides[current].classList.add('carousel__slide--active');
+          dots[current].classList.add('carousel__dot--active');
+        }
+
+        prevBtn.addEventListener('click', function () { goTo(current - 1); });
+        nextBtn.addEventListener('click', function () { goTo(current + 1); });
+        dots.forEach(function (dot, i) {
+          dot.addEventListener('click', function () { goTo(i); });
+        });
+      })();
+    </script>
+  </body>
+</html>
