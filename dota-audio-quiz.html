@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>John Lloyd's Project</title>
+    <meta name="description" content="Dota Audio Quiz" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/xpall/icons-svg/main/jl-logo-blue-text-bold-softcorner.svg" >
+    <link rel="shortcut icon" href="/favicon.ico">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/headshot.png"
+              alt="John Lloyd Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">John Lloyd</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#projects" class="header__link"> Projects </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://resume.johnlloyd.dev/John-Lloyd-Resume.pdf" target="_blank" class="header__link"> Resume </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://resume.johnlloyd.dev/John-Lloyd-Resume.pdf" target="_blank"> Resume </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Dota Audio Quiz</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            A browser game where you guess the <strong>Dota 2 ability from its sound</strong>.
+            The chgoices come from an <strong>audio embedding similarity
+            index</strong>, so harder modes throw near-identical sounds.<br>
+            Built from raw game files to a live leaderboard with <strong>Bash + Python extraction</strong>,
+            <strong>Dasheng-1.2B embeddings</strong>, and a <strong>free-tier stack</strong> (GitHub,
+            Cloudflare, Supabase).
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="https://dota-audio-quiz.johnlloyd.dev/" class="btn btn--bg" target="_blank">Play the Web App</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img class="project-picture"
+              src="./assets/jpeg/project-dota-audio-quiz.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <h4 class="project-details__content-subtitle">Introduction</h4>
+              <p class="project-details__desc-para">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dota Audio Quiz started with a simple question: can you recognize a spell by sound alone?
+                You pick a name, choose a mode, hear a spell, and pick the right icon from a grid of soundalikes.
+                Easy, Medium and Hard are 10-round runs that differ in how many choices you get and how similar
+                the wrong ones are. Endless uses the hard rules and only ends when you quit - a miss just
+                resets your streak. There's an Items mode too, and finished runs land on a shared leaderboard.
+              </p>
+              <h4 class="project-details__content-subtitle">Challenges</h4>
+              <p class="project-details__desc-para">
+                <strong>⏺ Pulling Assets Out of the Game:</strong> Dota 2 keeps its audio and icons locked inside VPK packages and compiled metadata - nothing is web-ready out of the box.<br>
+                <strong>⏺ Mapping Abilities to Audios:</strong> Hundreds of abilities, thousands of raw files, and names that rarely match the hero's folder. Doing it by hand doesn't scale.<br>
+                <strong>⏺ Fair Wrong Answers:</strong> Random distractors feel cheap. The fun is in decoys that are plausible but still distinguishable.<br>
+                <strong>⏺ Hosting for $0:</strong> It needed to stay online without a server bill or a free instance that sleeps.<br>
+                <strong>⏺ Scores People Can't Fake:</strong> Browser scores are easy to edit, so every submission has to be validated server-side.
+              </p>
+              <h4 class="project-details__content-subtitle">Solution</h4>
+              <p class="project-details__desc-para">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It comes down to a three-stage pipeline: mine the local Dota 2 install for sounds and icons,
+                embed every sound so the game can pick distractors by similarity, then ship the static game plus a
+                tiny API on free tiers.
+              </p>
+              <h4 class="project-details__content-subtitle">Step 1 - Dota 2 Asset Extraction from Local Install (Bash + Python)</h4>
+              <p class="project-details__desc-para">
+                <strong>⏺ Unpack the Local Install:</strong> Source2Viewer-CLI reads the VPKs straight from the local Dota 2 install, with shell scripts pulling thousands of sounds and icons in one go.<br>
+                <strong>⏺ Compiled Metadata:</strong> Cast sounds live in compiled game scripts, so those get extracted too - that's how files are grouped by ability.<br>
+                <strong>⏺ Python Cleanup:</strong> Python scripts walk the extracted tree, normalize paths and filenames, and sort audio into per-hero folders plus a spell icon tree.<br>
+              </p>
+              <h4 class="project-details__content-subtitle">Step 2 - Automatic Mapping and Audio Embeddings</h4>
+              <p class="project-details__desc-para">
+                <strong>⏺ One File to Rule Them All:</strong> <code>mapping.tsv</code> maps hero / ability / icon / sound and is the only file you edit to fix a clip.<br>
+                <strong>⏺ Automated Auditing:</strong> Python checkers flag rows where the icon and sound names don't line up, only require manual review for the tricky ones.<br>
+                <strong>⏺ Dedupe + Web-Ready Audio:</strong> Duplicate recordings collapse by content hash, then FFmpeg trims silence, normalizes to -16 LUFS and outputs small MP3s.<br>
+                <strong>⏺ Audio Embeddings:</strong> Every sound gets embedded with the open-source <strong>Dasheng-1.2B</strong> encoder, composite recipes included.<br>
+                <strong>⏺ Similarity Buckets:</strong> Cosine similarity sorts clips into <strong>near</strong> (closest 32), <strong>mid</strong> and <strong>far</strong> (farthest 32) buckets, same hero excluded.<br>
+                <strong>⏺ Human-in-the-Loop Editor:</strong> A dev-only page serves <code>mapping.tsv</code> for quick previews and remaps (recipes included), with an automatic backup.
+              </p>
+              <h4 class="project-details__content-subtitle">Step 3 - Free Deployment (GitHub + Cloudflare + Supabase)</h4>
+              <p class="project-details__desc-para">
+                <strong>⏺ GitHub:</strong> Holds the React 19 + Vite + Tailwind app, the Python tooling and the mapping. Generated assets are built during deploy, not committed.<br>
+                <strong>⏺ Cloudflare Pages / Workers Assets:</strong> Serves the static build on the free tier with a custom domain - no server to manage, no cold starts.<br>
+                <strong>⏺ Cloudflare Worker API:</strong> One dependency-free Worker handles <code>POST /scores</code>, <code>POST /reports</code> and <code>GET /leaderboard</code>. It re-sanitizes usernames and checks the score math, so fake payloads never reach the board.<br>
+                <strong>⏺ Supabase Postgres:</strong> Scores and reports live in Postgres, plus a <code>report_summary</code> view that surfaces the most-reported clips so fixes are data-driven.<br>
+              </p>
+              <h4 class="project-details__content-subtitle">Key Features</h4>
+              <p class="project-details__desc-para">
+                <strong>✔ Similarity-Driven Choices:</strong> Choices come from embeddings, not random.<br>
+                <strong>✔ Five Modes:</strong> Easy (4 choices), Medium (6), Hard (8), Endless and Items.<br>
+                <strong>✔ Layered Playback:</strong> Web Audio schedules each recipe step and layer in the browser, so one "sound" can be a swing plus an impact plus a voice line.<br>
+                <strong>✔ Live Leaderboard:</strong> Endless ranks best streaks, and scores are displayed.<br>
+                <strong>✔ Crowdsourced QA:</strong> A report flag sends the clip, mode and reason (wrong sound, better variant, etc.) for review.<br>
+                <strong>✔ Mobile-First:</strong> Touch-friendly grids, light/dark themes and lazy-loaded clips.<br>
+                <strong>✔ Free Forever:</strong> Static game, Worker API and database all run on free tiers.
+              </p>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="react-icon" width="30" height="30"><p style="text-align: center;">React</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript-icon" width="30" height="30"><p style="text-align: center;">TypeScript</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg" alt="vite-icon" width="30" height="30"><p style="text-align: center;">Vite</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" alt="tailwind-icon" width="30" height="30"><p style="text-align: center;">Tailwind</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python-icon" width="30" height="30"><p style="text-align: center;">Python</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg" alt="bash-icon" width="30" height="30"><p style="text-align: center;">Bash</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/ffmpeg.svg" alt="ffmpeg-icon" width="30" height="30"><p style="text-align: center;">FFmpeg</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" alt="pytorch-icon" width="30" height="30"><p style="text-align: center;">PyTorch</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cloudflare/cloudflare-original.svg" alt="cloudflare-icon" width="30" height="30"><p style="text-align: center;">Cloudflare</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg" alt="supabase-icon" width="30" height="30"><p style="text-align: center;">Supabase</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/github.svg" alt="Github-icon" width="30" height="30"><p>Github</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git-icon" width="30" height="30"><p>Git</p></div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="https://dota-audio-quiz.johnlloyd.dev/"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Play the Web App</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://github.com/xpall">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/github-ico.svg"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/johnlloyddev/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/linkedin-ico.svg"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/johnlloyd.dev">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/facebook-ico.svg"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="mailto:contact@johnlloyd.dev">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/gmail-ico.svg"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">John Lloyd</h4>
+            <p class="main-footer__short-desc">
+              <a href="mailto:contact@johnlloyd.dev">📩 contact@johnlloyd.dev</a><br>
+              🏳️ Laguna, Philippines
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2026 |<a rel="noreferrer" target="_blank" href="https://github.com/xpall/portfolio"
+            >John Lloyd</a
+          >
+          forked from<a rel="noreferrer" target="_blank" href="https://github.com/rammcodes/Dopefolio">Rammcodes</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </body>
+</html>
