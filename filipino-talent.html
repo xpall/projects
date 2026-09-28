@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>John Lloyd's Project</title>
+    <meta name="description" content="filipino-talent.com" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/xpall/icons-svg/main/jl-logo-blue-text-bold-softcorner.svg" >
+    <link rel="shortcut icon" href="/favicon.ico">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/headshot.png"
+              alt="John Lloyd Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">John Lloyd</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#projects" class="header__link"> Projects </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://resume.johnlloyd.dev/John-Lloyd-Resume.pdf" target="_blank" class="header__link"> Resume </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="https://johnlloyd.dev/#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://resume.johnlloyd.dev/John-Lloyd-Resume.pdf" target="_blank"> Resume </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="https://johnlloyd.dev/#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">filipino-talent.com</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            An open-source <strong>subdomain registry</strong> for Filipino remote workers, inspired by
+            <strong>is-a.dev</strong>. It gives aspiring developers, freelancers, and remote workers a free
+            <strong>yourname.filipino-talent.com</strong> address to point at a portfolio hosted on GitHub Pages,
+            Cloudflare Pages, Netlify, or Vercel.
+            <br> Built entirely on <strong>Cloudflare</strong>: an <strong>Astro</strong> site on Pages, a
+            <strong>Worker</strong> API, a <strong>D1</strong> database, and the <strong>Cloudflare DNS API</strong>
+            for automated record management.
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="https://filipino-talent.com" class="btn btn--bg" target="_blank">Visit filipino-talent.com</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img class="project-details__showcase-img project-picture"
+              src="./assets/jpeg/project-filipino-talent.png"
+              alt="filipino-talent.com homepage"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <h4 class="project-details__content-subtitle">Introduction</h4>
+              <p class="project-details__desc-para">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filipino-talent.com is a free, community-run subdomain registry for Filipino remote workers.
+                It exists for the same reason is-a.dev does: a professional-looking web address should not require a
+                domain budget. A user submits a form, receives a subdomain, and points it at whatever static host they
+                already use. The site is only the front door — the real work happens in a Cloudflare Worker that talks
+                to D1 and the Cloudflare DNS API to create and clean up records automatically.
+              </p>
+              <h4 class="project-details__content-subtitle">Challenges</h4>
+              <p class="project-details__desc-para">
+                <strong>⏺ Free-Tier DNS Limits:</strong> The Cloudflare free plan caps a zone at 200 DNS records, so every claimed subdomain is a scarce resource that must be managed carefully.<br>
+                <strong>⏺ Abuse and Squatting:</strong> An open subdomain registry invites impersonation, disposable requests, and collisions. Names need reserved-word and allowed-target validation.<br>
+                <strong>⏺ Publisher Confidence:</strong> A subdomain should only go live once the requester actually controls the portfolio they claim — otherwise the zone becomes a spam host.<br>
+                <strong>⏺ Safe Automation:</strong> Creating and deleting DNS records programmatically requires precise tagging so the automation never touches records it does not own.<br>
+                <strong>⏺ Reversibility:</strong> Removing a subdomain must reliably tear down both the DNS record and the public directory entry without leaving orphans behind.
+              </p>
+              <h4 class="project-details__content-subtitle">Solution</h4>
+              <p class="project-details__desc-para">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The platform is a self-service pipeline built on Cloudflare. A browser POSTs
+                to a Worker <code>/submit</code> route, which validates the requested name, applies rate limiting and
+                collision checks in D1, and inserts the submission. A cron job runs every 15 minutes, publishes verified
+                submissions to Cloudflare DNS, writes a <code>domains</code> row, and flips them to <code>live</code>;
+                submissions marked <code>removed</code> or <code>rejected</code> have their DNS record and directory entry
+                deleted on the same tick. Requesters confirm ownership by emailing from the address on their portfolio, so
+                questionable names can be pulled after the fact. Worker-managed DNS records are tagged
+                <code>managed-by:filipino-talent</code>, so only records created by the system are ever updated or deleted.
+                D1 and Cloudflare DNS are the single source of truth.
+              </p>
+              <h4 class="project-details__content-subtitle">Key Features</h4>
+              <p class="project-details__desc-para">
+                <strong>✔ Free Subdomains:</strong> A zero-cost <code>yourname.filipino-talent.com</code> for people who cannot yet afford their own domain.<br>
+                <strong>✔ Self-Service Submission:</strong> A form validates names, targets, and collisions before anything is published.<br>
+                <strong>✔ Automated Publishing:</strong> A 15-minute Cloudflare cron creates DNS records and flips submissions to live.<br>
+                <strong>✔ Safe Unpublish:</strong> Setting a submission to <code>removed</code> or <code>rejected</code> tears down the record and directory entry.<br>
+                <strong>✔ Managed-Record Tagging:</strong> Only DNS records tagged by the Worker are ever modified, protecting the rest of the zone.<br>
+                <strong>✔ Public Directory:</strong> A browsable, sortable list of claimed subdomains so users can discover each other's work.<br>
+                <strong>✔ Step-by-Step Guides:</strong> Host-specific tutorials for GitHub Pages, Cloudflare Pages, Netlify, Vercel, and Canva.<br>
+                <strong>✔ Open Source:</strong> Frontend and backend are MIT licensed, so other communities can fork and adapt them.
+              </p>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/astro/astro-original.svg" alt="astro-icon" width="30" height="30"><p style="text-align: center;">Astro</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript-icon" width="30" height="30"><p style="text-align: center;">TypeScript</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cloudflare/cloudflare-original.svg" alt="cloudflare-icon" width="30" height="30"><p style="text-align: center;">Cloudflare</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/cloudflareworkers.svg" alt="workers-icon" width="30" height="30"><p style="text-align: center;">Workers</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" alt="d1-sqlite-icon" width="30" height="30"><p style="text-align: center;">D1</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html5-icon" width="30" height="30"><p style="text-align: center;">HTML5</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css3-icon" width="30" height="30"><p style="text-align: center;">CSS3</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="github-icon" width="30" height="30"><p>Github</p></div>
+                <div class="skills__skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="git-icon" width="30" height="30"><p>Git</p></div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="https://filipino-talent.com"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Visit filipino-talent.com</a
+              >
+              <a
+                href="https://github.com/xpall/filipino-talent.com"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://github.com/xpall">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/github-ico.svg"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/johnlloyddev/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/linkedin-ico.svg"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/johnlloyd.dev">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/facebook-ico.svg"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="mailto:contact@johnlloyd.dev">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/ico/gmail-ico.svg"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">John Lloyd</h4>
+            <p class="main-footer__short-desc">
+              <a href="mailto:contact@johnlloyd.dev">📩 contact@johnlloyd.dev</a><br>
+              🏳️ Laguna, Philippines
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2026 |<a rel="noreferrer" target="_blank" href="https://github.com/xpall/portfolio"
+            >John Lloyd</a
+          >
+          forked from<a rel="noreferrer" target="_blank" href="https://github.com/rammcodes/Dopefolio">Rammcodes</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </body>
+</html>
